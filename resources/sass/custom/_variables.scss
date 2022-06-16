@@ -1,0 +1,87 @@
+// $primary: #fb503b;
+$enable-rounded: false;
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #2361ce !default;
+$indigo: #4F46E5 !default;
+$purple: #7C3AED !default;
+$pink: #EF4683 !default;
+$red: #E11D48 !default;
+$red-100: #fbbab5 !default;
+$red-200: #fbaea7 !default;
+$orange: #FBA918 !default;
+$brown: #b9a084 !default;
+$yellow: #f3c78e !default;
+$green: #10B981 !default;
+$teal: #1E90FF !default;
+$cyan: #63b1bd !default;
+$soft-indigo: #f5e8ff !default;
+$soft-green: #2CA58D !default;
+
+// scss-docs-start colors-map
+$colors: ("blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+        "white": $white,
+        "gray": $gray-600,
+        "gray-dark": $gray-800) !default;
+// scss-docs-end colors-map
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+
+// Color scheme
+$primary: #1F2937 !default;
+$secondary: #fb503b !default;
+$tertiary: #31316A !default;
+
+// Series names and colors. This can be extended or customized as desired. Just add more series and colors.
+$ct-series-names: (a, b, c, d, e, f, g) !default !default;
+$ct-series-colors: (#262B40,
+#F8BD7A,
+#2CA58D,
+#31316A,
+#C96480,
+#ffffff,
+#F8BD7A,
+) !default;
+
+
+$success: $green !default;
+$info: $blue !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$gray: $gray-900 !default;
+$light: $gray-400 !default;
+$lighten: $gray-300 !default;
+$soft: $gray-200 !default;
+$dark: $dark !default;
+
+$body-bg: #EAECF2;
+
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: transparent;
