@@ -19,26 +19,14 @@
       </div>
     </box>
 
-    <box class="box-primary">
-      <template #header>Today 6-17-2022</template>
-      <task>Fooo</task>
-      <task>Fooo</task>
-      <task>Fooo</task>
-      <task>Fooo</task>
-      <task>Fooo</task>
-      <task>Fooo</task>
+    <box v-for="(tasks, date) in todos">
+      <template #header>{{ date }}</template>
+
+      <task v-for="task in tasks.todo">{{ task.description }}</task>
 
       <template #footer>
-        <button class="btn btn-default">
-          Done
-          <span class="badge bg-primary">4</span>
-        </button>
+        <done-footer :done="tasks.done"></done-footer>
       </template>
-    </box>
-
-    <box class="box-warning">
-      <template #header>Yesterday 6-16-2022</template>
-      <task>Fooo</task>
     </box>
 
   </Layout>
@@ -46,7 +34,16 @@
 
 <script setup>
 import Box from '@/Shared/Box'
-import Task from '@/Todo/Task'</script>
+import Task from '@/Todo/Task'
+import DoneFooter from '@/Todo/DoneFooter'
+
+defineProps({
+  todos: Object
+})
+
+</script>
+
+
 
 <style scoped>
 </style>

@@ -2,7 +2,7 @@
 
 namespace App\Actions\Task;
 
-use App\Models\Tasks;
+use App\Models\Task;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class CreateTask
@@ -11,6 +11,6 @@ class CreateTask
 
     public function handle($data)
     {
-        return Tasks::create($data);
+        return Task::create($data);
     }
 }

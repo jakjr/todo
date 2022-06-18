@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use App\Models\Tasks;
+use App\Models\Task;
 use App\Actions\Task\CreateTask;
 use App\Actions\Task\DeleteTask;
 use App\Actions\Task\CompleteTask;
@@ -18,7 +18,7 @@ class TaskTest extends TestCase
 
     public function test_create_new_task()
     {
-        $task = Tasks::create([
+        $task = Task::create([
             'description' => 'test'
         ]);
 
@@ -29,7 +29,7 @@ class TaskTest extends TestCase
 
     public function test_complete_a_task()
     {
-        $task = Tasks::factory()->make();
+        $task = Task::factory()->make();
 
         $task->setAttribute('done', true)->save();
 
@@ -56,7 +56,7 @@ class TaskTest extends TestCase
 
     public function test_delete_action()
     {
-        $task = Tasks::factory()->make();
+        $task = Task::factory()->make();
 
         app(DeleteTask::class)->handle($task);
 
@@ -67,7 +67,7 @@ class TaskTest extends TestCase
 
     public function test_complete_action()
     {
-        $task = Tasks::factory()->make();
+        $task = Task::factory()->make();
 
         app(CompleteTask::class)->handle($task);
 
