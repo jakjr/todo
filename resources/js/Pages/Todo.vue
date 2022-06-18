@@ -4,12 +4,16 @@
 
     <box class="mt-2">
       <div class="d-flex justify-content-between">
-        <div class="d-flex justify-content-between">
-          <input class="form-control" placeholder="new task">
-          <button class="btn btn-primary">
-            <i class="fa fa-plus"></i>
-          </button>
-        </div>
+
+        <form @submit.prevent="create()">
+          <div class="d-flex justify-content-between">
+            <input v-model="form.description" class="form-control" placeholder="new task">
+            <button class="btn btn-primary" type="submit">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </form>
+
 
         <div>
           <button class="btn btn-default">
@@ -22,7 +26,7 @@
     <box v-for="(tasks, date) in todos">
       <template #header>{{ date }}</template>
 
-      <task v-for="task in tasks.todo">{{ task.description }}</task>
+      <task v-for="task in tasks.todo" :task="task">{{ task.description }}</task>
 
       <template #footer>
         <done-footer :done="tasks.done"></done-footer>
@@ -36,13 +40,23 @@
 import Box from '@/Shared/Box'
 import Task from '@/Todo/Task'
 import DoneFooter from '@/Todo/DoneFooter'
+import { useForm } from "@inertiajs/inertia-vue3";
 
 defineProps({
   todos: Object
 })
 
-</script>
+const form = useForm({
+  description: null
+})
 
+function create() {
+  form.post(route('tasks.store'), {
+    onSuccess: () => form.reset(),
+  })
+}
+
+</script>
 
 
 <style scoped>
