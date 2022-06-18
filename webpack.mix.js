@@ -14,14 +14,14 @@ mix
     // })
     //.webpackConfig(webpackConfig)
     //.disableSuccessNotifications()
-    // .browserSync({
-    //     proxy: 'volt.d',
-    //     //notify: true,
-    //     //open: true,
-    //     open: 'external',
-    //     host: 'volt.d',
-    //     cors: true,
-    //     //files: ['!node_modules', '!vendor', 'public/{*,**/*}', '{*,**/*}.php']
-    //     files: ['!node_modules', '!vendor', 'public/{*,**/*}']
-    // })
+    .browserSync({
+        proxy: 'todo.d',
+        //notify: true,
+        //open: true,
+        open: 'external',
+        host: 'todo.d',
+        cors: true,
+        //files: ['!node_modules', '!vendor', 'public/{*,**/*}', '{*,**/*}.php']
+        files: ['!node_modules', '!vendor', 'public/{*,**/*}']
+    })
     .sourceMaps()
