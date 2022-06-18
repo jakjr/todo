@@ -1,21 +1,26 @@
 <template>
   <div class="d-flex justify-content-between align-items-center border-bottom py-2 px-1 task">
 
-    <div><slot/></div>
+    <div>
+      <slot/>
+    </div>
 
     <div class="d-flex gap-1">
-      <button class="btn btn-sm btn-default">
+      <Link :href="route('tasks.done', task)" as="button" class="btn btn-sm btn-default" method="put" preserve-scroll>
         <i class="fa fa-check"></i>
-      </button>
+      </Link>
 
-      <button class="btn btn-sm btn-danger">
+      <Link :href="route('tasks.destroy', task)" as="button" class="btn btn-sm btn-danger" method="delete" preserve-scroll>
         <i class="fa fa-trash"></i>
-      </button>
+      </Link>
     </div>
   </div>
 </template>
 
 <script setup>
+defineProps({
+  task: Object
+})
 </script>
 
 <style scoped>
