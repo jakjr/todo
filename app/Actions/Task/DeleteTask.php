@@ -2,14 +2,14 @@
 
 namespace App\Actions\Task;
 
-use App\Models\Tasks;
+use App\Models\Task;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class DeleteTask
 {
     use AsAction;
 
-    public function handle(Tasks $task)
+    public function handle(Task $task)
     {
         $task->delete();
     }
