@@ -32,7 +32,8 @@
         "vue": "^3.2.26",
         "vue-filepond": "^7.0.3",
         "vue-meta": "^2.4.0",
-        "vue-toastification": "^2.0.0-rc.5"
+        "vue-toastification": "^2.0.0-rc.5",
+        "vuedraggable": "^4.1.0"
     },
     "devDependencies": {
         "browser-sync": "^2.27.9",

@@ -12,3 +12,4 @@ Route::get('t', function () {
 Route::get('/', TodoController::class);
 Route::resource('tasks', TaskController::class)->only(['store', 'destroy']);
 Route::put('tasks/{task}/done', [TaskController::class, 'done'])->name('tasks.done');
+Route::put('tasks/{task}/move', [TaskController::class, 'move'])->name('tasks.move');

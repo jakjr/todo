@@ -42,4 +42,11 @@ class TaskController extends Controller
 
         return back();
     }
+
+    public function move(Request $request, Task $task)
+    {
+        $task->setAttribute('position', $request->position)->save();
+
+        return back();
+    }
 }

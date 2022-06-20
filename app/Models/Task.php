@@ -12,4 +12,12 @@ class Task extends Model
     protected $fillable = [
         'description', 'done'
     ];
+
+    public static function booted()
+    {
+        static::creating(function($task){
+            $task->position = self::query()->whereDay('created_at', today())->orderByDesc('position')->first()?->position + 60000;
+        });
+    }
+
 }

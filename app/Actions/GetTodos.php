@@ -13,8 +13,12 @@ class GetTodos
     {
 
         return Task::query()
-            ->latest()
+            ->orderByDesc('position')
             ->get()
+            ->transform(function($task){
+                $task->day = $task->created_at->format('m-d-Y');
+                return $task;
+            })
             ->groupBy([
                 function ($task) {
                     return $task->created_at->format('m-d-Y');

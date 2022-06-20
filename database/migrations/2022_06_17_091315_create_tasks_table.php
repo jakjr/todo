@@ -18,6 +18,7 @@ class CreateTasksTable extends Migration
 
             $table->string('description');
             $table->boolean('done')->default(false);
+            $table->double('position');
 
             $table->timestamps();
         });
