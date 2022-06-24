@@ -26,7 +26,10 @@ class GetTodos
                 function ($task) {
                     return $task->done ? 'done' : 'todo';
                 }
-            ]);
+            ])
+            ->sortByDesc(function($todos, $day){
+                return $day;
+            });
 
     }
 }

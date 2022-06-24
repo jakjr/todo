@@ -12,7 +12,7 @@ class TodoController extends Controller
     {
         $todos = GetTodos::run();
         //dd($todos);
-        return inertia('Todo')
+        return inertia('Grid')
             ->with('todos', $todos);
     }
 }
