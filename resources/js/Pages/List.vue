@@ -15,7 +15,7 @@
         </form>
 
         <div>
-          <Link :href="route('grid')" as="button" class="btn btn-default">
+          <Link :href="route('grid')" as="button" class="btn btn-default" preserve-state>
             <i class="fa fa-th-large"></i>
             Grid view
           </Link>

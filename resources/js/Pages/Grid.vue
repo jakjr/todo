@@ -15,7 +15,7 @@
         </form>
 
         <div>
-          <Link :href="route('list')" as="button" class="btn btn-default">
+          <Link :href="route('list')" as="button" class="btn btn-default" preserve-state>
             <i class="fa fa-list"></i>
             List view
           </Link>
