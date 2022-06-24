@@ -14,11 +14,11 @@
           </div>
         </form>
 
-
         <div>
-          <button class="btn btn-default">
-            Grid
-          </button>
+          <Link :href="route('list')" class="btn btn-default" as="button">
+            <i class="fa fa-list"></i>
+            List view
+          </Link>
         </div>
       </div>
     </box>
