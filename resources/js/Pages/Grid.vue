@@ -15,7 +15,7 @@
         </form>
 
         <div>
-          <Link :href="route('list')" class="btn btn-default" as="button">
+          <Link :href="route('list')" as="button" class="btn btn-default">
             <i class="fa fa-list"></i>
             List view
           </Link>
@@ -91,9 +91,11 @@ function onChange(e) {
 
   Inertia.put(route('tasks.move', task), {
     'position': position
+  }, {
+    preserveState: true,
+    preserveScroll: true
   })
 }
-
 
 </script>
 
