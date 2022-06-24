@@ -10,3 +10,14 @@ Below a raw prototype:
 
 The final result:
 [![Final result](result.png)](https://vimeo.com/723834753/71aa55b963 "Final Result")
+
+# instalation
+```git cone https://github.com/jakjr/todo.git ./todo```
+
+```cd todo```
+
+```composer install```
+
+```npm install```
+
+```npm run watch```
